@@ -117,52 +117,161 @@ case 1:
         printf("Super Poder: %f\n", superpoderC2);
     
         /*Desafio tema 2*/
+
+        char PrimeiroAtributo;
+        char SegundoAtributo;
+        int Resultado1, Resultado2;
         
         printf("\n Comparaçao de cartas: \n");
-    
-        if (populacao > populacaoC2)
+
+        printf("Escolha o primeiro atributo de comparação\n");
+        printf("O - População\n");
+        printf("A - Área\n");
+        printf("P - PIB\n");
+        printf("T - Pontos Turísticos\n");
+        printf("I - PIB per capita\n");
+        printf("D - Densidade Populacional\n");
+        printf("S - Super Poder\n");
+
+        printf("DIGITE:\n");
+        scanf(" %c", &PrimeiroAtributo);
+
+        switch (PrimeiroAtributo)
         {
-            printf("População: Carta 1 venceu!\n");
-        } else {
-            printf("População: Carta 2 venceu!\n");
+        case 'O':
+        case 'o':
+            printf("Você escolheu População!\n");
+            Resultado1 = populacao > populacaoC2 ? 1 : 0;
+            
+            break;
+
+        case 'A':
+        case 'a':
+            printf("Você escolheu Área!\n");
+            Resultado1 = area > areaC2 ? 1 : 0;
+                
+             break;
+
+        case 'P':
+        case 'p':
+            printf("Você escolheu População!\n");
+            Resultado1 = pib > pibC2 ? 1 : 0;
+                    
+            break;
+                    
+        case 'T':
+        case 't':
+            printf("Você escolheu Pontos Turísticos!\n");
+            Resultado1 = pontos_turisticos > pontos_turisticosC2 ? 1 : 0;
+                        
+            break;        
+        case 'I':
+        case 'i':
+            printf("Você escolheu PIB per capita!\n");
+            Resultado1 = pibpercap > pibpercapc2 ? 1 : 0;
+                             
+            break;
+        case 'D':
+        case 'd':
+            printf("Você escolheu Densidade!\n");
+            Resultado1 = densidade < densidadeC2 ? 1 : 0;
+                                  
+            break;          
+        case 'S':
+        case 's':
+            printf("Você escolheu Super Poder!\n");
+            Resultado1 = superpoder > superpoderC2 ? 1 : 0;
+                            
+            break;
+        default:
+            printf("Opção Inválida!!!\n");
+            break;
         }
-        if (area > areaC2)
+
+        printf("Escolha o segundo atributo de comparação\n");
+        printf("Devera ser diferente do primeiro\n");
+        printf("O - População\n");
+        printf("A - Área\n");
+        printf("P - PIB\n");
+        printf("T - Pontos Turísticos\n");
+        printf("I - PIB per capita\n");
+        printf("D - Densidade Populacional\n");
+        printf("S - Super Poder\n");
+
+        printf("DIGITE:\n");
+        scanf(" %c", &SegundoAtributo);
+
+        if (PrimeiroAtributo == SegundoAtributo)
         {
-            printf("Àrea: Carta 1 venceu!\n");
+            printf("Você escolheu o mesmo atributo!!!\n");
+
         } else {
-            printf("Àrea: Carta 2 venceu!\n");
-        }
-        if (pib > pibC2)
+        
+            switch (SegundoAtributo)
         {
-            printf("PIB: Carta 1 venceu!\n");
-        } else {
-            printf("PIB: Carta 2 venceu!\n");
-        }
-        if (pontos_turisticos > pontos_turisticosC2)
-        {
-            printf("Pontos turísticos: Carta 1 venceu!\n");
-        } else {
-            printf("Pontos turísticos: Carta 2 venceu!\n");
-        }
-        if (densidade < densidadeC2)
-        {
-            printf("Densidade: Carta 1 venceu!\n");
-        } else {
-            printf("Densidade: Carta 2 venceu!\n");
-        }
-        if (pibpercap > pibpercapc2)
-        {
-            printf("PIB per capita: Carta 1 venceu!\n");
-        } else {
-            printf("PIB per capita: Carta 2 venceu!\n");
-        }
-        if (superpoder > superpoderC2)
-        {
-            printf("Superpoder: Carta 1 venceu!\n");
-        } else {
-            printf("Superpoder: Carta 2 venceu!\n");
-        }
-    
+        case 'O':
+        case 'o':
+            printf("Você escolheu População!\n");
+            Resultado2 = populacao > populacaoC2 ? 1 : 0;
+            
+            break;
+
+        case 'A':
+        case 'a':
+            printf("Você escolheu Área!\n");
+            Resultado2 = area > areaC2 ? 1 : 0;
+                
+             break;
+
+        case 'P':
+        case 'p':
+            printf("Você escolheu População!\n");
+            Resultado2 = pib > pibC2 ? 1 : 0;
+                    
+            break;
+                    
+        case 'T':
+        case 't':
+            printf("Você escolheu Pontos Turísticos!\n");
+            Resultado2 = pontos_turisticos > pontos_turisticosC2 ? 1 : 0;
+                        
+            break;        
+        case 'I':
+        case 'i':
+            printf("Você escolheu PIB per capita!\n");
+            Resultado2 = pibpercap > pibpercapc2 ? 1 : 0;
+                             
+            break;
+        case 'D':
+        case 'd':
+            printf("Você escolheu Densidade!\n");
+            Resultado2 = densidade < densidadeC2 ? 1 : 0;
+                                  
+            break;          
+        case 'S':
+        case 's':
+            printf("Você escolheu Super Poder!\n");
+            Resultado2 = superpoder > superpoderC2 ? 1 : 0;
+                            
+            break;
+        default:
+            printf("Opção Inválida!!!\n");
+            break;
+        }}
+
+    if (Resultado1 && Resultado2) {
+
+        printf("Você venceu!!!\n");
+    }
+    else if (Resultado1 != Resultado2)
+    {
+        printf("Empatou\n");
+    }
+    else 
+    {
+        printf("Você Perdeu!!!\n");
+
+    }
 
 break;
 
@@ -189,10 +298,12 @@ break;
 default:
 
 printf("Opção Invalida... Tente novamente!!!");
-
     
-    }
+    break;
+}
+
+
 
     return 0;
-}
+}}
 
